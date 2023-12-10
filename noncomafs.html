@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Commercial Aircrafts</title>
+    <link rel="stylesheet" href="jetintelstyles.css">
+</head>
+<body>
+    <div id="menubar-container"></div>
+    <script>
+      // Use fetch to load menubar.html
+      fetch('menubar.html')
+        .then(response => response.text())
+        .then(data => {
+          // Inject the content into the menubar-container
+          document.getElementById('menubar-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading menubar.html:', error));
+    </script>
+<section id="title-section">
+<div id="slogan-text">
+<h4 id="welcome-text">Non-Commercial Aircrafts</h1>
+<h5 id="slogan-text">This page displays Non-Commercial Aircrafts</h2>
+</div>
+</section>
+
+
+    <!-- Add the rest of the content related to the Commercial Aircrafts here -->
+</body>
+</html>

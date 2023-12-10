@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="comafsstyles.css">
+  <title>Flight Information</title>
+  <style>
+    body {
+      margin: 0; /* Remove default margin */
+      padding: 20px; /* Add padding to separate the menu bar from the body */
+      background-color: #f0f0f0; /* Optional: Set a background color for the body area */
+    }
+
+    /* Add CSS styles for uniform columns */
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      width: 100%; /* Use full width of the body area */
+      position: relative;
+      z-index: 1; /* Ensure the row stays above the menu bar */
+    }
+
+    .column {
+      flex-basis: calc(33.33% - 20px); /* Adjust the width of each column */
+      margin: 10px; /* Adjust margin as needed for spacing */
+    }
+
+    #menubar-container {
+      background-color: #333; /* Optional: Set a background color for the menu bar */
+      color: #fff; /* Optional: Set text color for the menu bar */
+      padding: 10px; /* Optional: Add padding to the menu bar */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Load menubar.html dynamically -->
+  <div id="menubar-container"></div>
+
+  <h2 style="text-align: center;">Commercial Aircrafts</h2>
+
+  <img src="boeinglogo.jpeg" src="" alt="Your Logo" class="logo">
+
+  <!-- New section named "row" with three columns -->
+  <section class="row">
+    <div class="column">
+      <img src="737max.jpg" alt="Flight 7" class="animated-image">
+      <p class="animated-text">Boeing 737max.</p>
+    </div>
+
+    <div class="column">
+      <img src="747-8.jpg" alt="Flight 8" class="animated-image">
+      <p class="animated-text">Boeing 747-8</p>
+    </div>
+
+    <div class="column">
+      <img src="767.jpg" alt="Flight 9" class="animated-image">
+      <p class="animated-text">Boeing 767</p>
+    </div>
+  </section>
+
+  <section class="row">
+    <div class="column">
+      <img src="777.jpg" alt="Flight 7" class="animated-image">
+      <p class="animated-text">Boeing 777</p>
+    </div>
+
+    <div class="column">
+      <img src="777x.jpg" alt="Flight 8" class="animated-image">
+      <p class="animated-text">Boeing 777x</p>
+    </div>
+
+    <div class="column">
+      <img src="787.jpg" alt="Flight 9" class="animated-image">
+      <p class="animated-text">Boeing 787</p>
+    </div>
+  </section>
+
+  <img src="boeinglogo.jpeg" src="" alt="Your Logo" class="logo">
+
+  <!-- New section named "row" with three columns -->
+  <section class="row">
+    <div class="column">
+      <img src="Airbus A220.jpg" alt="Flight 7" class="animated-image">
+      <p class="animated-text">Boeing 737max.</p>
+    </div>
+
+    <div class="column">
+      <img src="747-8.jpg" alt="Flight 8" class="animated-image">
+      <p class="animated-text">Boeing 747-8</p>
+    </div>
+
+    <div class="column">
+      <img src="767.jpg" alt="Flight 9" class="animated-image">
+      <p class="animated-text">Boeing 767</p>
+    </div>
+  </section>
+
+  <section class="row">
+    <div class="column">
+      <img src="777.jpg" alt="Flight 7" class="animated-image">
+      <p class="animated-text">Boeing 777</p>
+    </div>
+
+    <div class="column">
+      <img src="777x.jpg" alt="Flight 8" class="animated-image">
+      <p class="animated-text">Boeing 777x</p>
+    </div>
+
+    <div class="column">
+      <img src="787.jpg" alt="Flight 9" class="animated-image">
+      <p class="animated-text">Boeing 787</p>
+    </div>
+  </section>
+
+
+  <script>
+    // Use fetch to load menubar.html
+    fetch('menubar.html')
+      .then(response => response.text())
+      .then(data => {
+        // Inject the content into the menubar-container
+        document.getElementById('menubar-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading menubar.html:', error));
+  </script>
+</body>
+
+</html>
